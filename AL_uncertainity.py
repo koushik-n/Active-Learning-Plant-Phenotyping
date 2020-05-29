@@ -30,7 +30,7 @@ def parse_input():
     p.add_argument('batch_size', type=int, help="active learning batch size")
     p.add_argument('initial_size', type=int, help="initial sample size for active learning")
     p.add_argument('iterations', type=int, help="number of active learning batches to sample")
-    p.add_argument('--main_path', '-mp', type=str,default=None)
+    p.add_argument('--output_path', '-op', type=str,default=None)
     p.add_argument('method', type=str,
                    choices={'Random','LC','Entropy','BALD'},
                    help="sampling method ('Random','LC','Entropy','BALD')")
