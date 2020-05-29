@@ -30,7 +30,7 @@ def parse_input():
     p.add_argument('batch_size', type=int, help="active learning batch size")
     p.add_argument('initial_size', type=int, help="initial sample size for active learning")
     p.add_argument('iterations', type=int, help="number of active learning batches to sample")
-    p.add_argument('--main_path', '-mp', type=str,default=None)
+    p.add_argument('--output_path', '-mp', type=str,default=None)
     p.add_argument('method', type=str,
                    choices={'Coreset'})
     p.add_argument('--initial_idx_path', '-idx', type=str,default=None,help="path to a folder with a pickle file with the initial indices of the labeled set")
