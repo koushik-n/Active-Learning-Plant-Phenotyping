@@ -25,4 +25,5 @@ python3 main.py <experiment_index> <batch_size> <initial_size> <iterations> <out
 - lp: a path to labels in numpy format
 - gpu: the gpus to use for training the models.
 
-
+## Datasets
+The weed species classification dataset by Olsen et al.,2019 is available [here](https://github.com/AlexOlsen/DeepWeeds)
