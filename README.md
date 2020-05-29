@@ -11,7 +11,10 @@ In order to run our code, you'll need these main packages:
 ## Running the code
 The code for running uncertainity methods is in AL_uncertainity.py and for coreset is AL_coreset.py. This code was modified from the code for [Discriminative Active Learning](https://github.com/dsgissin/DiscriminativeActiveLearning) paper.
 ```
-python3 main.py <experiment_index> <batch_size> <initial_size> <iterations> <output_path> -idx <indices_path> -wip <weights_path> -dp <data_path> -lp <labels_path> -gpu <gpus>
+python3 AL_unertainity.py <experiment_index> <batch_size> <initial_size> <iterations>  <output_path> <method> -idx <indices_path> -wip
+<weights_path> -dp <data_path> -lp <labels_path> -gpu <gpus>
+python3 AL_coreset.py <experiment_index> <batch_size> <initial_size> <iterations> <output_path> <Coreset> -idx <indices_path> -wip
+<weights_path> -dp <data_path> -lp <labels_path> -gpu <gpus>
 ```
 - experiment_index: an integer detailing the number of experiment (since usually many are run in parallel and combined later).
 - batch_size: the size of the batch of examples to be labeled in every iteration.
@@ -26,4 +29,4 @@ python3 main.py <experiment_index> <batch_size> <initial_size> <iterations> <out
 - gpu: the gpus to use for training the models.
 
 ## Datasets
-The weed species classification dataset by Olsen et al.,2019 is available [here](https://github.com/AlexOlsen/DeepWeeds)
+The weed species classification dataset by Olsen et al.,2019 is available [here](https://github.com/AlexOlsen/DeepWeeds).
