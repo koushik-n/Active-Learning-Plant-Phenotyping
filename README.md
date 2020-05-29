@@ -20,8 +20,8 @@ python3 AL_coreset.py <experiment_index> <batch_size> <initial_size> <iterations
 - batch_size: the size of the batch of examples to be labeled in every iteration.
 - initial_size: the amount of labeled examples to start the experiment with (chosen randomly).
 - iteration: the amount of active learning iterations to run in the experiment.
-- method: a string for the name of the query strategy to be used in the experiment ("Random", "LC" (Least Confidence"), Entropy, BALD).
 - output_path: the path of the folder where the experiment data and results will be saved.
+- method: a string for the name of the query strategy to be used in the experiment ("Random", "LC" (Least Confidence"), Entropy, BALD).
 - idx: a path to the folder with the pickle file containing the initial labeled example indices for the experiment (optional).
 - wip: a path to file containing initial model weights (usually the weights after training using the first batch of random sampling. This is optional)
 - dp: a path to complete dataset in numpy format
