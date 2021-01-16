@@ -186,7 +186,13 @@ if __name__ == '__main__':
         labeled_idx=np.random.choice(len(X_train),initial_size, replace=False)
     checkpoint_path=os.path.join(output_path,'{methods}_{exp}_{b_s}_{i_s}/'.format(method=args.method,exp=args.experiment_index,b_s=args.batch_size,i_s=args.iterations))
     os.makedirs(checkpoint_path,exist_ok=True)
-    ResNet50_model = applications.ResNet50(input_shape=(256,256,3),include_top=True,weights=None, input_tensor=None, pooling=None,classes=9)
+    
+    model=Sequential()
+    model.add(applications.ResNet50(input_shape=(256,256,3),include_top=False,weights=None, input_tensor=None, pooling=None,classes=9))
+    model.add(Droput(0.5))
+    model.add(Dense(9,activation="softmax"))
+    
+    ResNet50_model = model
     checkpoint_initial_path=args.weights_init_path
     if checkpoint_initial_path is not None:
         model=load_model(checkpoint_initial_path)
